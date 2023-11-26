@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-void generateSamples(int arraysToGenerate, int lengthOfArray, char* outputFile) {
+void generateSamples(long arraysToGenerate, long lengthOfArray, char* outputFile) {
     srand((unsigned int)time(NULL));
     FILE *fp;
     fp = fopen(outputFile, "w");
-    fprintf(fp, "%d %d\n", arraysToGenerate, lengthOfArray);
-    for (int arrayNum = 0; arrayNum < arraysToGenerate; arrayNum++) {
-        for (int i = 0; i < lengthOfArray; i++) {
+    fprintf(fp, "%ld %ld\n", arraysToGenerate, lengthOfArray);
+    for (long arrayNum = 0; arrayNum < arraysToGenerate; arrayNum++) {
+        for (long i = 0; i < lengthOfArray; i++) {
             int r = rand();
             fprintf(fp, "%d ", r);
         }
@@ -26,12 +26,13 @@ int main(int argc, char* argv[]) {
             "arg3: output file name");
         return 1;
     }
-    int arraysToGenerate = atoi(argv[1]);
-    int lengthOfArray = atoi(argv[2]);
+    long arraysToGenerate, lengthOfArray;
+    sscanf(argv[1], "%ld", &arraysToGenerate);
+    sscanf(argv[2], "%ld", &lengthOfArray);
     char* outputFile = argv[3];
     printf("Sample generator:\n"
-        "\tArrays to generate: %d\n"
-        "\tLength of each array: %d\n"
+        "\tArrays to generate: %ld\n"
+        "\tLength of each array: %ld\n"
         "\tOutput file: %s\n",
         arraysToGenerate, lengthOfArray, outputFile);
     generateSamples(arraysToGenerate, lengthOfArray, outputFile);
