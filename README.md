@@ -40,8 +40,10 @@ make clean
 
 ### `main`
 
+* **arg1:** input file name
+
 ```shell
-./main
+./main input.txt
 ```
 
 ### `samplegen`
