@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <mergesort.h>
 
-void mergeSortCUDA(void) {
+void mergeSortCUDA(int arr[], long size) {
     printf("mergeSortCUDA()\n");
     return;
 }

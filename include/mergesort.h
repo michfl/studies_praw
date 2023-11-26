@@ -1,6 +1,6 @@
 
-void mergeSortPlain(void);
+void mergeSortPlain(int arr[], long size);
 
-void mergeSortOpenMP(void);
+void mergeSortOpenMP(int arr[], long size);
 
-void mergeSortCUDA(void);
+void mergeSortCUDA(int arr[], long size);
