@@ -19,6 +19,9 @@ SAMPLEGEN_OBJ = $(patsubst %,$(ODIR)/%,$(_SAMPLEGEN_OBJ))
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS) $(OMPFLAGS)
 
+$(ODIR)/%.o: %.cu $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
 main: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(OMPFLAGS)
 

@@ -42,9 +42,12 @@ int isSorted(int *arr, long arrLength) {
 }
 
 double performTests(char *method, void (*f)(int*, long), int* arr, long arrLength) {
-    int arrCopy1[arrLength], arrCopy2[arrLength];
+    int *arrCopy1, *arrCopy2;
     clock_t begin, end;
     double timeSpent;
+
+    arrCopy1 = malloc(arrLength * sizeof(int));
+    arrCopy2 = malloc(arrLength * sizeof(int));
 
     copyArray(arr, arrCopy1, arrLength);
     copyArray(arr, arrCopy2, arrLength);
