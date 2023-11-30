@@ -1,5 +1,5 @@
 #include <mergesort.h>
 
-void mergeSortCUDA(int arr[], long size) {
+void mergeSortCUDA(int *arr, long size) {
     return;
 }

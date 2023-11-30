@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
         printf("Insufficient number of args:\n"
             "arg1: number of arrays to generate\n"
             "arg2: length of each array\n"
-            "arg3: output file name");
+            "arg3: output file name\n");
         return 1;
     }
     long arraysToGenerate, lengthOfArray;
@@ -36,6 +36,6 @@ int main(int argc, char* argv[]) {
         "\tOutput file: %s\n",
         arraysToGenerate, lengthOfArray, outputFile);
     generateSamples(arraysToGenerate, lengthOfArray, outputFile);
-    printf("done");
+    printf("done\n");
     return 0;
 }

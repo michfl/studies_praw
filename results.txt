@@ -1,0 +1,45 @@
+Test 1:
+- sequential:   is sorted: 1,   time: 0.009009s
+- OpenMP    :   is sorted: 1,   time: 0.008823s
+- OpenMP_opt:   is sorted: 1,   time: 0.001897s
+Test 2:
+- sequential:   is sorted: 1,   time: 0.008836s
+- OpenMP    :   is sorted: 1,   time: 0.004637s
+- OpenMP_opt:   is sorted: 1,   time: 0.001869s
+Test 3:
+- sequential:   is sorted: 1,   time: 0.008979s
+- OpenMP    :   is sorted: 1,   time: 0.006121s
+- OpenMP_opt:   is sorted: 1,   time: 0.002150s
+Test 4:
+- sequential:   is sorted: 1,   time: 0.010276s
+- OpenMP    :   is sorted: 1,   time: 0.006561s
+- OpenMP_opt:   is sorted: 1,   time: 0.001750s
+Test 5:
+- sequential:   is sorted: 1,   time: 0.009971s
+- OpenMP    :   is sorted: 1,   time: 0.007824s
+- OpenMP_opt:   is sorted: 1,   time: 0.001929s
+Test 6:
+- sequential:   is sorted: 1,   time: 0.009106s
+- OpenMP    :   is sorted: 1,   time: 0.006740s
+- OpenMP_opt:   is sorted: 1,   time: 0.001896s
+Test 7:
+- sequential:   is sorted: 1,   time: 0.009880s
+- OpenMP    :   is sorted: 1,   time: 0.005368s
+- OpenMP_opt:   is sorted: 1,   time: 0.001958s
+Test 8:
+- sequential:   is sorted: 1,   time: 0.008919s
+- OpenMP    :   is sorted: 1,   time: 0.005132s
+- OpenMP_opt:   is sorted: 1,   time: 0.001897s
+Test 9:
+- sequential:   is sorted: 1,   time: 0.009028s
+- OpenMP    :   is sorted: 1,   time: 0.005904s
+- OpenMP_opt:   is sorted: 1,   time: 0.001962s
+Test 10:
+- sequential:   is sorted: 1,   time: 0.009121s
+- OpenMP    :   is sorted: 1,   time: 0.007339s
+- OpenMP_opt:   is sorted: 1,   time: 0.001857s
+
+Summary:
+- sequential:   mean time: 0.009312s    1.00x,  min: 0.008836s  1.00x,  max: 0.010276s  1.00x,  uncertainty: 0.000720s
+- OpenMP    :   mean time: 0.006445s    1.44x,  min: 0.004637s  1.91x,  max: 0.008823s  1.16x,  uncertainty: 0.002093s
+- OpenMP_opt:   mean time: 0.001916s    4.86x,  min: 0.001750s  5.05x,  max: 0.002150s  4.78x,  uncertainty: 0.000200s
