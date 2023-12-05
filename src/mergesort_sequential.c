@@ -1,6 +1,8 @@
 #include <mergesort.h>
 #include <mergesort_sequential.h>
 
+// merge sort alg sources: https://www.geeksforgeeks.org/merge-sort/
+
 // 1 subarray -> arr[l..m]
 // 2 subarray -> arr[m+1..r]
 void merge(int *arr, int l, int m, int r) {

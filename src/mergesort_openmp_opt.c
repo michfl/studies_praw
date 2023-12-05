@@ -6,6 +6,8 @@
 #define THREADS_N 16
 #define TASK_SIZE 1000
 
+// opt merge sort alg sources: https://en.wikipedia.org/wiki/Merge_sort#Top-down_implementation
+
 void merge_OpenMP_opt(int *arr, int * tmp, long size) {
     long i = 0;
     long j = size / 2;
@@ -59,11 +61,10 @@ void mergeSortParallel_OpenMP_opt(int *arr, int *tmp, long size) {
 void mergeSortOpenMPOpt(int *arr, long size) {
     omp_set_nested(0);
     omp_set_dynamic(0);
-    omp_set_num_threads(THREADS_N);
 
     int *tmp = malloc(size * sizeof(int));
 
-    #pragma omp parallel
+    #pragma omp parallel num_threads(THREADS_N)
     {
         #pragma omp single
         mergeSortParallel_OpenMP_opt(arr, tmp, size);

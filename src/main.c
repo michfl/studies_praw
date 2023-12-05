@@ -4,12 +4,13 @@
 #include <time.h>
 #include <mergesort.h>
 
-#define METHODS_N 3
+#define METHODS_N 5
 
 #define SEQUENTIAL  "sequential"
 #define OPEN_MP     "OpenMP    "
 #define OPEN_MP_OPT "OpenMP_opt"
 #define CUDA        "CUDA      "
+#define CUDA_OPT    "CUDA_opt  "
 
 void readMetadata(FILE *fp, long* arrNumber, long* arrLength) {
     fscanf(fp, "%ld %ld", arrNumber, arrLength);
@@ -117,12 +118,16 @@ int main(int argc, char* argv[]) {
     char *methods[] = {
         SEQUENTIAL, 
         OPEN_MP,
-        OPEN_MP_OPT
+        OPEN_MP_OPT,
+        CUDA,
+        CUDA_OPT
     };
     void (*methodAlgorithms[])(int*, long) = {
         mergeSortSequential,
         mergeSortOpenMP,
-        mergeSortOpenMPOpt
+        mergeSortOpenMPOpt,
+        mergeSortCUDA,
+        mergeSortCUDAOpt
     };
     // END
 
